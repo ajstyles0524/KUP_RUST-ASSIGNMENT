@@ -2,7 +2,7 @@
 ///
 /// #Arguments
 ///
-/// input_number: A input_number is a integer type input number whose use to check even or not
+/// input_number: A input_number is a i32 integer type input number whose use to check even or not
 ///
 /// #Return
 ///
@@ -18,7 +18,7 @@ fn is_even(input_number: i32) -> Result<String, String> {
 ///
 /// #Arguments
 ///
-/// input_number: The input_number is a integer type input number whose use to check even or not with handle error and value
+/// input_number: The input_number is a i32 integer type input number whose use to check even or not with handle error and value
 ///
 /// #Return
 ///
