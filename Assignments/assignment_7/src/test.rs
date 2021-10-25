@@ -12,14 +12,14 @@ mod tests {
     #[test]
     fn check_even_failure_first(){
         assert_ne!(
-            response_handle(4),
+            response_handle(3),
             "Please provide correct input".to_string()
         );
     }
     #[test]
     fn check_even_failure_second(){
         assert_ne!(
-            response_handle(6),
+            response_handle(7),
             "Please provide correct input".to_string()
         );
     }
