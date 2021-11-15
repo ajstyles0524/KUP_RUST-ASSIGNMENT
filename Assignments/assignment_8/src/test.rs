@@ -63,24 +63,36 @@ mod tests {
         );
     }
     #[test]
-    fn custom_iterator_success_first() {
+    fn check_iterator_one() {
         let mut gp = GeometricSeries {
             first_number: 1,
             current_number: 1,
             ratio: 2,
         };
         assert_eq!(
-            gp.take(11).unwrap(),
+            gp.take(11),
             vec![1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
         );
     }
     #[test]
-    fn custom_iterator_failure_first() {
+    fn check_iterator_two() {
         let mut gp = GeometricSeries {
-            first_number: 1,
-            current_number: 1,
-            ratio: 2,
+            first_number: 2,
+            current_number: 2,
+            ratio: 4,
         };
-        assert_eq!(gp.take(0), Err("Please provide valid input".to_string()));
+        assert_eq!(
+            gp.take(5),
+            vec![2,8,32,128,512]
+        );
+    }
+    #[test]
+    fn check_iterator_three() {
+        let mut gp = GeometricSeries {
+            first_number: 0,
+            current_number: 0,
+            ratio: 0,
+        };
+        assert_eq!(gp.take(1), [0]);
     }
 }
