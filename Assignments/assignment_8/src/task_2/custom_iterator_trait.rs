@@ -13,7 +13,7 @@ pub struct GeometricSeries {
     pub ratio: i32,
 }
 pub trait Iterator {
-    fn take(&mut self, size: i32) -> Result<Vec<i32>, String>;
+    fn take(&mut self, size: i32) -> Vec<i32>;
 }
 impl Iterator for GeometricSeries {
     /// The take method is used return next ( n = size)  number in GP Series
@@ -25,15 +25,12 @@ impl Iterator for GeometricSeries {
     /// #Return
     ///
     /// Returns Result enum which contains next n number in GP series and handle Error as Well
-    fn take(&mut self, size: i32) -> Result<Vec<i32>, String> {
-        if size == 0 {
-            return Err("Please provide valid input".to_string());
-        }
+    fn take(&mut self, size: i32) ->Vec<i32>{
         let mut series: Vec<i32> = Vec::new();
         for _index in 0..size {
             series.push(self.current_number);
             self.current_number *= self.ratio;
         }
-        Ok(series)
+        series
     }
 }
