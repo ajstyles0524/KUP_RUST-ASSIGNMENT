@@ -31,7 +31,7 @@ pub fn second_consecutive_repeated(
         }
         Nil => {
             error!("Empty box provided in the given list");
-            return Err("Please Provide valid list".to_string());
+            Err("Please Provide valid list".to_string())
         }
     }
 }
