@@ -14,10 +14,14 @@ use crate::list::List::{Cons, Nil};
 /// Return Result<i32,String>,first repeating element from a given list and handle error as well.
 pub fn first_consecutive_repeated(temporary_number: i32, list: List) -> Result<i32, String> {
     match list {
-        Cons(current_number, list) => match temporary_number == current_number {
-            true => Ok(current_number),
-            false => first_consecutive_repeated(current_number, *list),
-        },
+        Cons(current_number, list) => {
+            if temporary_number == current_number {
+                Ok(current_number)
+            } else {
+                first_consecutive_repeated(current_number, *list)
+            }
+        }
+
         Nil => {
             error!("Empty box provided in the given list");
             Err("Please Provide valid list".to_string())
