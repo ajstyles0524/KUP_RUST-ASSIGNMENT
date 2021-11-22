@@ -14,7 +14,7 @@ use crate::list::List::{Cons, Nil};
 /// #Return
 ///
 /// Return Result<i32,String>,second repeating element from a given list and handle error as well.
-pub fn second_consecutive_repeated(
+pub fn _second_consecutive_repeated(
     temporary_number: i32,
     count: i32,
     list: List,
