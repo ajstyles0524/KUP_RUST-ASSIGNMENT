@@ -12,8 +12,8 @@ use crate::list::List::{Cons, Nil};
 /// #Return
 ///
 /// Return bool type(true,false)
-pub fn odd_check(current_number: i32) -> bool {
-    !(current_number % 2 == 0)
+pub fn _odd_check(current_number: i32) -> bool {
+    current_number % 2 != 0
 }
 /// third_odd_search function is used to find third odd element in list
 ///
@@ -25,7 +25,7 @@ pub fn odd_check(current_number: i32) -> bool {
 /// #Return
 ///
 /// Return Result<i32,String>,third odd element in list and handle error as well.
-pub fn third_odd_search(count: i32, list: List) -> Result<i32, String> {
+pub fn _third_odd_search(count: i32, list: List) -> Result<i32, String> {
     match list {
         Cons(current_number, list) => {
             let current_value = odd_check(current_number);
