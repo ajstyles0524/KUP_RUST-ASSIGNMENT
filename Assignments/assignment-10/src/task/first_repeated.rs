@@ -12,7 +12,7 @@ use crate::list::List::{Cons, Nil};
 /// #Return
 ///
 /// Return Result<i32,String>,first repeating element from a given list and handle error as well.
-pub fn first_consecutive_repeated(temporary_number: i32, list: List) -> Result<i32, String> {
+pub fn _first_consecutive_repeated(temporary_number: i32, list: List) -> Result<i32, String> {
     match list {
         Cons(current_number, list) => match temporary_number == current_number {
             true => Ok(current_number),
