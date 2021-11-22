@@ -13,11 +13,7 @@ use crate::list::List::{Cons, Nil};
 ///
 /// Return bool type(true,false)
 pub fn odd_check(current_number: i32) -> bool {
-    if !(current_number % 2 == 0)  {
-        true
-    } else {
-        false
-    }
+    !(current_number % 2 == 0)
 }
 /// third_odd_search function is used to find third odd element in list
 ///
