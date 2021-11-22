@@ -25,7 +25,7 @@ pub fn nth_index_element(index: i32, count: i32, list: List) -> Result<i32, Stri
         }
         Nil => {
             error!("Empty box provided in the given list");
-            return Err("Please Provide valid list".to_string());
+            Err("Please Provide valid list".to_string())
         }
     }
 }
