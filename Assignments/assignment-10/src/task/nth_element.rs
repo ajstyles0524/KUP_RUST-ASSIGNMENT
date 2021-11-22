@@ -14,7 +14,7 @@ use crate::list::List::{Cons, Nil};
 /// #Return
 ///
 /// Return Result<i32,String>, nth index element in list and handle error as well.
-pub fn nth_index_element(index: i32, count: i32, list: List) -> Result<i32, String> {
+pub fn _nth_index_element(index: i32, count: i32, list: List) -> Result<i32, String> {
     match list {
         Cons(current_number, list) => {
             if index == count {
