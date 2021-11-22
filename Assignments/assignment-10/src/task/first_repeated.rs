@@ -20,7 +20,7 @@ pub fn first_consecutive_repeated(temporary_number: i32, list: List) -> Result<i
         },
         Nil => {
             error!("Empty box provided in the given list");
-            return Err("Please Provide valid list".to_string());
+            Err("Please Provide valid list".to_string())
         }
     }
 }
