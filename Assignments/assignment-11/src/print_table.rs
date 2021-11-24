@@ -1,3 +1,4 @@
+use log::*;
 use async_std::task;
 use futures::future::join;
 use std::time::Duration;
@@ -14,14 +15,14 @@ pub async fn print_table() {
     let two_table = async {
         for index in 1..11 {
             let value = 2 * index;
-            println!("{}", value);
+            debug!("{}", value);
         }
         task::sleep(Duration::from_secs(1)).await;
     };
     let third_table = async {
         for index in 1..11 {
             let value = 3 * index;
-            println!("{}", value);
+            debug!("{}", value);
         }
         task::sleep(Duration::from_secs(1)).await;
     };
