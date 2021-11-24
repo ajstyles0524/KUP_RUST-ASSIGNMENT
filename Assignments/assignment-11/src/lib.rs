@@ -1,3 +1,3 @@
-mod async_data;
-mod print_table;
-mod test;
+pub mod async_data;
+pub mod print_table;
+pub mod test;
