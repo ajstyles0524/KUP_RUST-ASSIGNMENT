@@ -9,7 +9,7 @@ use std::time::Duration;
 ///
 /// #Return
 ///
-/// The returned future will finish with a tuple of both results.
+/// No return
 pub async fn print_table() {
     let two_table = async {
         for index in 1..11 {
